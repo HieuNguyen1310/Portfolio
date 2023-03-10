@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/style3Ds.css">
+    <title>3Ds</title>
+</head>
+<body>
+    <div class="cursor"></div>
+    <header>
+    
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="./index.html#home_section">home,</a></li>
+                <li><a href="./index.html#work_section">work,</a></li>
+                <li><a href="./index.html#aboutMe_section">about me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- TITLE -->
+        <section class="row scroll">
+            <div class="title">
+                <h1>3Ds</h1>
+                <p>This is not just a playground, but for me 3D is a new space. Nothing can be more satisfying than creating an object like what you think it is. An object includes both height, length and depth.</p>
+            </div>
+        </section>
+        <!-- ------------------- -->
+
+        <!-- CONTENT  -->
+        <section class="row scroll">
+            <div class="column pic">
+                <div><img src="https://drive.google.com/uc?export=view&id=14xYODbvUNgHrcRuvzualcoMnGlXeMXQ6" alt="Bag"></div>
+            </div>
+            
+            <div class="column thumb_des">
+                <div class="thumb">Bag</div>
+                <p class="des">Here's one of the challenges I set for myself: Modeling my everyday objects. And here's the first item, a backpack.</p>
+            </div>
+        </section>
+
+        <section class="row scroll">
+            <div class="column pic">
+                <div><img src="https://drive.google.com/uc?export=view&id=1s6bQtuU_KpPauE1PKc6-JsNbsNHjGbwC" alt="Chess"></div>
+            </div>
+            
+            <div class="column thumb_des">
+                <div class="thumb">Chess</div>
+                <p class="des">Chess is an intellectual sport that I love very much. So I tried to create my own pieces.</p>
+            </div>
+        </section>
+
+        <section class="row scroll">
+            <div class="column vid">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/irfPNM8tTOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="column thumb_des">
+                <div class="thumb">Inside the Pyramid</div>
+                <p class="des">Have you ever wondered what is inside a pyramid? And here's my answer for you: an alien experiment.</p>
+            </div>
+        </section>
+
+        <section class="row scroll">
+            <div class="column vid">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cZfaFAIIhvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="column thumb_des">
+                <div class="thumb">Fennek Perfume</div>
+                <p class="des">I proudly introduce to you, a whole brand new perfume. It has the smell of the wind, the speed and the passion. It is Fennek Perfume</p>
+            </div>
+        </section>
+
+        
+        <!-- -----------------------------  -->
+    </main>
+    
+
+
+    <img src="./assets/Image/Grid-proto.png" alt="grid_proto-01" class="grid_proto">
+
+</body>
+<script src="./assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+			integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+    <script>
+        $(document).ready(function () {
+    screenCheck();
+
+function applyScroll() {
+    $.scrollify({
+        section: '.scroll',
+        sectionName: 'section-name',
+        //standardScrollElements: 'section',
+        easing: 'easeOutExpo',
+        scrollSpeed: 1000,
+        offset: 0,
+        scrollbars: true,
+        setHeights: true,
+        overflowScroll: true,
+        updateHash: false,
+        touchScroll: true,
+    });
+}
+
+function screenCheck() {
+    var deviceAgent = navigator.userAgent.toLowerCase();
+    var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+    if (agentID || $(window).width() <= 1024) {
+        // its mobile screen
+        $.scrollify.destroy();
+        $('section').removeClass('scroll').removeAttr('style');
+        $.scrollify.disable();
+    } else {
+        // its desktop
+        $('section').addClass('scroll');
+        applyScroll();
+        $.scrollify.enable();
+    }
+}
+})
+    </script>
+</html>

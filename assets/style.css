@@ -1,0 +1,362 @@
+:root {
+    --orange: #EA5106;
+    --black: #000;
+    --white: #fff;
+    --square-w: 7.3vw;
+    --square-h: 13vh;
+    --gap-w: calc((var(--square-w) / 10) * 2);
+    --gap-h:calc((var(--square-h) /10) * 2);
+    --letter-w: 4.2vw;
+}
+
+/* ------------------------------------------------------- */
+
+/* ---------nav bar--------------- */
+
+nav {
+    position: fixed;
+    z-index: 3;
+    top: calc(var(--square-h) - var(--gap-h) * 2);
+    right: var(--square-w);
+}
+
+.menu {
+    display: flex;
+
+}
+
+.menu li {
+    list-style: none;
+
+}
+
+.menu li:hover {
+    list-style: none;
+    text-decoration-line: underline;
+    text-decoration-thickness: .3vw;
+    
+}
+
+.menu li a.active {
+    text-decoration-line: line-through;
+    text-decoration-thickness: .3vw;
+    transition: text-decoration-line ease .3s;
+
+}
+
+
+
+.menu a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 2vw;
+    font-weight: 700;
+
+}
+
+/* ----------------------------------------- */
+
+/* -------------- HOME SECTION------------- */
+.side {
+    height: 100vh;
+    width: 100%;
+    
+    overflow: hidden;
+    position: absolute;
+
+    
+}
+  
+.L-title {
+    color: var(--white);
+    font-family: "Be Vietnam", sans-serif;
+    background-color: transparent;
+    font-size: 15vw;
+}
+
+.side .L-title {
+    margin-top: var(--square-h);
+    margin-left: var(--square-w);
+}
+
+.instruction {
+    /* overflow: hidden; */
+    position: absolute;
+    margin-left: calc(var(--square-w) * 8);
+    margin-top: calc(var(--gap-h) * 3);
+    /* width: 10vw; */
+}
+
+.instruction h3 {
+    color: var(--white);
+    font-size: 1.75vw;
+    /* overflow: hidden; */
+    position: absolute;
+    
+}
+
+.arrow{
+    margin-left: calc(var(--square-w) * 1.5);
+    margin-top: var(--gap-h);
+    transform: translate(-5vw, 5vw);
+    
+}
+.arrow_body{
+    width: .5vw;
+    border-radius: .25vw;
+    height: calc(var(--square-h) + var(--gap-h) );
+    background-color: var(--white);
+}
+.arrow_down{
+    width: 2vw;
+    height: 2vw;
+    border-bottom: .5vw solid var(--white);
+    border-right: .5vw solid var(--white);
+    border-radius: .3vw;
+    transform: rotate(45deg) translate(-2vw, -1vw);
+}
+  
+#L-side {
+    background-color: var(--orange);
+    z-index: 2;
+    
+}
+
+.description{
+    position: absolute;
+    z-index: 1;
+    top: var(--square-h);
+    left: var(--square-w);
+}
+.des_para{
+    color: var(--white);
+    font-family: "Be Vietnam", sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 3vw;
+}
+
+.portfolio {
+    margin-top: calc(var(--square-h) * 4);
+    margin-left: calc(var(--square-w) * 8);
+}
+
+.R-title {
+    color: var(--white);
+    font-family: "Be Vietnam", sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 4vw;
+}
+
+.R-para {
+    color: var(--white);
+    font-family: "Be Vietnam", sans-serif;
+    font-weight: 600;
+    background-color: transparent;
+    font-size: 2vw;
+}
+
+
+#R-side {
+    background-color: var(--black);
+}
+
+/* ---------------------------------------------- */
+
+/* ---------------- WORK SECTION ----------------------- */
+.inf_slider  {
+    margin-top: -10vw;
+    padding: 0;
+    /* margin-left: var(--square-w); */
+    opacity: 0.5;
+    animation: vert_scroll 120s linear infinite;
+
+}
+
+@keyframes vert_scroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+.slide h1 {
+    color: var(--black);
+    font-size: 16vw;
+    -webkit-text-stroke: .5vw var(--white);
+    margin-bottom: -11.5vw;
+}
+
+
+
+.product {
+    position: absolute;
+    z-index: 2;
+    top: 115vh;
+    right: var(--square-w);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.product a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 7vw;
+}
+
+.graphics{
+    display: flex;
+}
+
+.p, .d, .td {
+    background-color: none;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: auto;
+    max-width: var(--letter-w);
+    transition: max-width 1.2s;
+}
+
+.td {
+    max-width: calc(var(--letter-w) + .5vw);
+}
+
+.graphics:hover > .p,
+.videos:hover > .d,
+.tds:hover > .td {
+    background-color: var(--orange);
+    max-width: calc(var(--letter-w) * 6.5);
+}
+
+.tds:hover > .td {
+
+    max-width: calc(var(--letter-w) * 6.85);
+}
+
+.videos{
+    display: flex;
+}
+.tds{
+    display: flex;
+}
+
+/* -------------------------------------------------- */
+
+/* ---------------- About me section --------------------- */
+
+.contact_me {
+    background-color: var(--black);
+    height: 100vh;
+    width: calc(var(--square-w) * 4);
+    position: relative;
+    margin-left: calc(var(--square-w) * -3.5);
+    
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    transition: margin-left 1s;
+}
+
+.contact_me:hover {
+    margin-left: 0;
+}
+
+.contact_links ul {
+    margin-left: var(--square-w);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    margin-left: var(--gap-w);
+    
+}
+
+.contact_me_title {
+    color: var(--white);
+    font-size: 1.5vw;
+    font-weight: 900;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.contact_links li {
+    text-decoration: none;
+    /* background-color: var(--black); */
+    /* border-radius: .4vw; */
+    padding: -.2vw;
+    /* transition: background-color .3s; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    box-shadow: inset 0 0 0 0 var(--orange);
+    transition: ease-out .5s;
+    
+}
+
+.contact_links li:hover {
+    /* background-color: var(--orange); */
+    left: 1vw;
+    box-shadow: inset 700px 0 0 0 var(--orange);
+}
+
+.link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+.link span {
+    font-weight: 800;
+    margin-left: 2vw;
+}
+
+.about_me {
+    display: flex;
+}
+
+/* i {
+
+} */
+
+
+.about_me_title h1{
+    color: var(--white);
+    font-size: 15vw;
+    margin-bottom: -5vw;
+
+}
+
+.about_des{
+    color: var(--white);
+    font-size: 1.5vw;
+    font-weight:700;
+
+    position: absolute;
+    margin-right: var(--square-w);
+    margin-top: calc(var(--square-h) * 4);
+    left: calc(var(--square-w) * 8);
+}
+
+
+
+
+
+/* ---------------------------------------------- */
+  
+  
+  
+
+
+
+

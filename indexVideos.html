@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/styleVideos.css">
+    <title>Videos</title>
+</head>
+<body>
+    <div class="cursor"></div>
+    <header>
+    
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="./index.html#home_section">home,</a></li>
+                <li><a href="./index.html#work_section">work,</a></li>
+                <li><a href="./index.html#aboutMe_section">about me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- TITLE -->
+        <section class="row scroll">
+            <div class="title">
+                <h1>Videos</h1>
+                <p>Graphics is where I play with passion. Then Videos is the place where I bring my imagination to life. Video is a tool that helps me to convey more messages to people.</p>
+            </div>
+        </section>
+        <!-- ------------------- -->
+
+        <!-- CONTENT  -->
+        <section class="row scroll">
+            <div class="column vid">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TPYDU5wu4TE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="column thumb_des">
+                <div class="thumb">Shooter</div>
+                <p class="des">Shooter is a rap song performed by two young rappers from the KPL rap team. This is Shooter's Offical Visual Video, a work that I am very passionate about.
+                <br>Fact: Verified by Phuc Du to be of high quality.</p>
+            </div>
+        </section>
+
+        <section class="row scroll">
+            <div class="column vid">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/otbc6kpbwZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="column thumb_des">
+                <div class="thumb">RUC</div>
+                <p class="des">I am currently a member of RMIT Ultimate Club (RUC). This video is I personally make to promo my club for school club day fest.</p>
+            </div>
+        </section>
+
+        <section class="row scroll">
+            <div class="column vid">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KrU2JrAbbvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="column thumb_des">
+                <div class="thumb">BAMA - Ad Video </div>
+                <p class="des">BAMA is a fashion brand specializing in backpacks. This video is for an advertising campaign that focus on the model that appear in the footage.</p>
+            </div>
+        </section>
+
+        <section class="row scroll">
+            <div class="column vid">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/o4AT9IqxJR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="column thumb_des">
+                <div class="thumb">BAMA - Motion Graphic Reel </div>
+                <p class="des">Here's a special piece of video that I was asked to do. To create a short footage but still present the features of the product and attract many viewers.</p>
+            </div>
+        </section>
+
+        <section class="row scroll">
+            <div class="column vid">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-8zkvWpCBBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="column thumb_des">
+                <div class="thumb">BAMA - Puzzle</div>
+                <p class="des">This is a special reel that was made for the purpose of creating a new type of video for instagram.</p>
+            </div>
+        </section>
+
+        <section class="row scroll">
+            <div class="column vid">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SSdVGHqusAo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="column thumb_des">
+                <div class="thumb">Stage of Wormwood</div>
+                <p class="des">This piece is a 30 seconds trailer for my short animation film. This is a story about a Tuong artist uses wormwood in the hope of becoming famous. </p>
+            </div>
+        </section>
+        <!-- -----------------------------  -->
+    </main>
+    
+
+
+    <img src="./assets/Image/Grid-proto.png" alt="grid_proto-01" class="grid_proto">
+
+</body>
+<script src="./assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+			integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+    <script>
+        $(document).ready(function () {
+    screenCheck();
+
+function applyScroll() {
+    $.scrollify({
+        section: '.scroll',
+        sectionName: 'section-name',
+        //standardScrollElements: 'section',
+        easing: 'easeOutExpo',
+        scrollSpeed: 1000,
+        offset: 0,
+        scrollbars: true,
+        setHeights: true,
+        overflowScroll: true,
+        updateHash: false,
+        touchScroll: true,
+    });
+}
+
+function screenCheck() {
+    var deviceAgent = navigator.userAgent.toLowerCase();
+    var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+    if (agentID || $(window).width() <= 1024) {
+        // its mobile screen
+        $.scrollify.destroy();
+        $('section').removeClass('scroll').removeAttr('style');
+        $.scrollify.disable();
+    } else {
+        // its desktop
+        $('section').addClass('scroll');
+        applyScroll();
+        $.scrollify.enable();
+    }
+}
+})
+    </script>
+</html>
