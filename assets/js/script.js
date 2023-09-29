@@ -1,3 +1,12 @@
+// ------------Infinite Auto Scroll--------------------------
+
+
+// -----------------------------------------------
+
+
+
+
+
 const left = document.getElementById("L-side");
 
 const handleOnMove = e => {
